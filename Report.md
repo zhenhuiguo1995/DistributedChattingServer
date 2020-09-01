@@ -25,8 +25,6 @@ we mainly have two components in the project: a CentralServer and a Client
 
 - CentralServer: the central server is responsible to provide centralized services, including registering an account, logging into an account, a user creating a group, a user joining a group, logging out of an account and checking active members of a groups. Further, the central server essentially provides interfaces to micro-services, since each service is provided in a thread. 
 
-![Client-Server](/home/alfred/Desktop/Distributed-System/final-project/Client-Server.jpg)
-
 
 
 - Client: client mainly has two functions
@@ -37,13 +35,9 @@ we mainly have two components in the project: a CentralServer and a Client
 
     - when a user sends a post, it first gets the active user list from the central server, then directly sends the message to all other clients within the specified group
 
-    ![Client-Client](/home/alfred/Desktop/Distributed-System/final-project/Client-Client.jpg)
-
     
 
     - when a user joins a group, or tries to get all posts within a group, it asks the central server for an active group member information, and then sends the request to an active member of the group. The receiver, upon receiving the request, will reply all the posts in the group to the sender
-
-  ![Client_all_posts](/home/alfred/Desktop/Distributed-System/final-project/Client_all_posts.jpg)
 
 
 
